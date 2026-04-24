@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Inter";
+    --font-body: "Inter";
+    --font-mono: monospace;
+    --radius: 0.625rem;
+
+    /* Light professional green + white theme — high contrast, clean hierarchy */
+    --background: 0.99 0.004 145;
+    --foreground: 0.18 0.06 155;
+
+    --card: 1.0 0.0 0;
+    --card-foreground: 0.18 0.06 155;
+    --popover: 1.0 0.0 0;
+    --popover-foreground: 0.18 0.06 155;
+
+    --primary: 0.38 0.14 155;
+    --primary-foreground: 0.99 0.005 155;
+
+    --secondary: 0.94 0.04 145;
+    --secondary-foreground: 0.22 0.08 155;
+
+    --muted: 0.91 0.03 145;
+    --muted-foreground: 0.45 0.05 150;
+
+    --accent: 0.46 0.18 155;
+    --accent-foreground: 0.99 0.005 155;
+
+    --destructive: 0.55 0.2 25;
+    --destructive-foreground: 0.99 0.0 0;
+
+    --border: 0.87 0.04 145;
+    --input: 0.87 0.04 145;
+    --ring: 0.38 0.14 155;
+
+    --chart-1: 0.38 0.14 155;
+    --chart-2: 0.46 0.18 155;
+    --chart-3: 0.6 0.1 148;
+    --chart-4: 0.72 0.07 145;
+    --chart-5: 0.3 0.12 155;
+
+    --sidebar: 0.38 0.14 155;
+    --sidebar-foreground: 0.99 0.005 155;
+    --sidebar-primary: 0.46 0.18 155;
+    --sidebar-primary-foreground: 0.99 0.005 155;
+    --sidebar-accent: 0.94 0.04 145;
+    --sidebar-accent-foreground: 0.22 0.08 155;
+    --sidebar-border: 0.8 0.05 148;
+    --sidebar-ring: 0.38 0.14 155;
+  }
+
+  .dark {
+    --background: 0.94 0.02 145;
+    --foreground: 0.18 0.06 155;
+    --card: 1.0 0.0 0;
+    --card-foreground: 0.18 0.06 155;
+    --popover: 1.0 0.0 0;
+    --popover-foreground: 0.18 0.06 155;
+
+    --primary: 0.38 0.14 155;
+    --primary-foreground: 0.99 0.005 155;
+
+    --secondary: 0.94 0.04 145;
+    --secondary-foreground: 0.22 0.08 155;
+
+    --muted: 0.91 0.03 145;
+    --muted-foreground: 0.45 0.05 150;
+
+    --accent: 0.46 0.18 155;
+    --accent-foreground: 0.99 0.005 155;
+
+    --destructive: 0.5 0.2 25;
+    --destructive-foreground: 0.99 0.0 0;
+
+    --border: 0.84 0.05 145;
+    --input: 0.84 0.05 145;
+    --ring: 0.38 0.14 155;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-smooth;
+  }
+
+  .btn-secondary {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90 transition-smooth;
+  }
+
+  .card-elevated {
+    @apply bg-card shadow-sm border border-border hover:shadow-md transition-smooth;
+  }
+
+  .text-hero {
+    @apply font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  .text-section-title {
+    @apply font-display font-bold text-3xl md:text-4xl text-foreground;
+  }
+
+  .text-label {
+    @apply font-body font-semibold text-xs text-accent uppercase tracking-widest;
+  }
+
+  .section-dark {
+    background-color: oklch(0.22 0.07 155);
+    color: oklch(0.99 0.005 155);
+  }
+
+  .section-divider {
+    @apply border-t border-border;
+  }
+
+  .link-nav {
+    @apply text-sm font-medium transition-colors duration-200;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+}

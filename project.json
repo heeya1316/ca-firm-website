@@ -1,0 +1,27 @@
+{
+  "overview": "A modern, professional multi-page website for Sharma & Associates, Chartered Accountants — a CA firm based in India. Features a homepage with hero and services, About Us, a detailed Services page with 5 categories, Contact with a form, and a Blog listing. Built with React, TypeScript, and Tailwind CSS in a clean navy blue and green corporate design.",
+  "features": [
+    "5-page website: Home, About, Services, Contact, Blog",
+    "Sticky navigation header with mobile hamburger menu",
+    "Hero section with CTAs (Get Consultation, File Your ITR Now)",
+    "Services grid covering Taxation, Accounting, Audit, Business Registration, NRI Taxation",
+    "Trust/credibility section with firm metrics",
+    "Contact form with validation",
+    "Blog listing with sample post cards",
+    "Navy blue, white, and green corporate design",
+    "Fully mobile responsive with Tailwind CSS",
+    "Inter font and Lucide React icons throughout"
+  ],
+  "category": "showcase",
+  "tags": [
+    "ca-firm",
+    "chartered-accountant",
+    "india",
+    "corporate",
+    "professional-services",
+    "react",
+    "typescript",
+    "tailwind"
+  ],
+  "last_updated": "2026-04-12T06:11:09.048Z"
+}
